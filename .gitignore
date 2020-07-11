@@ -1,0 +1,12 @@
+*.swp
+*.txt
+*.pkl
+*.pyc
+*.log
+*.yaml
+
+*.venv/
+benchmark/
+assets/
+
+!.gitignore
