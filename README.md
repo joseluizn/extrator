@@ -1,6 +1,8 @@
 # Extrator de precedentes do STJ e STF
 
-Esse pacote oferece uma ferramenta em Python 2.7 para a extração de citação de precedentes de decisões do Superior Tribunal de Justiça (STJ) e do Supremo Tribunal Federal (STF). Por precedentes nos referimos a citações a processos já decididos pelo tribunal.
+This package offers a Python 2.7 tool for the extraction of precedents citation from opinions issued by the Brazilian Superior Court of Justice (Superior Tribunal de Justiça - STJ) and Brazilian Supreme Court (Supremo Tribunal Federal - STF). 
+
+
 
 ## Installation Instructions
 
