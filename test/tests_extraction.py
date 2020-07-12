@@ -8,10 +8,6 @@ from extraction import PatternsFactory
 from helpers import normalize
 
 
-class PipelineTests(unittest.TestCase):
-    pass
-
-
 class ExtractionTests(unittest.TestCase):
 
     def setUp(self):
