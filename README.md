@@ -29,3 +29,26 @@ To run the program you must  run the following command from the root:
 ```
 python core.py --ids FILE -c COURT --n_cores N_PROCESS
 ```
+
+## Output
+
+The file output is saved to a CSV file named out.csv. It should look like the table below.
+
+| Documento                               | Classe | Num     | Tribunal |
+|-----------------------------------------|--------|---------|----------|
+| 20170526\\\_AREsp\\\_1035422\\\_8421733 | resp   | 1234057 | STJ      |
+| 20170526\\\_AREsp\\\_1035422\\\_8421733 | resp   | 1507973 | STJ      |
+| 20080502\\\_Ag\\\_1016162\\\_102373     | sum\.  | 5       | STJ      |
+| 20080502\\\_Ag\\\_1016162\\\_102373     | sum\.  | 7       | STJ      |
+| 20080502\\\_Ag\\\_1016162\\\_102373     | resp   | 829835  | STJ      |
+| 20080502\\\_Ag\\\_1016162\\\_102373     | resp   | 208468  | STJ      |
+| 20080502\\\_Ag\\\_1016162\\\_102373     | eresp  | 237553  | STJ      |
+| 20080502\\\_Ag\\\_1016162\\\_102373     | resp   | 473159  | STJ      |
+
+
+Columns translation:
+
+  1. Documento: name of the file from which citation was extracted
+  2. Classe: Cited case class, which type of proceeding was filled before the Court.
+  3. Num: Number designated by the Court. With classe identifies the cited precedent from that Court
+  4. Tribunal: Court from which the case was cited. Inferred by textual patterns, and by default it is the same as Court that issued the opinion.
