@@ -38,6 +38,7 @@ To run the full routine of tests included use the following command
 
 ```
 python -m unittest discover -s test -p 'tests_*.py'
+```
 
 ## Output
 
