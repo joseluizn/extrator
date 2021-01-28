@@ -32,6 +32,13 @@ To run the program you must  run the following command from the root:
 python core.py --ids FILE -c COURT --n_cores N_PROCESS
 ```
 
+## Testing
+
+To run the full routine of tests included use the following command
+
+```
+python -m unittest discover -s test -p 'tests_*.py'
+
 ## Output
 
 The file output is saved to a CSV file named out.csv. It should look like the table below.
