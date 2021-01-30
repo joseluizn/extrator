@@ -316,7 +316,7 @@ if __name__ == '__main__':
     try:
         log.info('Running...')
         
-        run_from(args.ids, args.default_court, args.n_cores)
+        run_from(args.ids, args.default_court, int(args.n_cores))
 
         build_payload_and_write_to_csv(D)
     except Exception as e:
