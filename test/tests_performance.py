@@ -63,7 +63,7 @@ class SampleTestSTJ(unittest.TestCase):
         """
         Tests algorithm precision against annotations
         """
-        precision_benchmark = 385/431
+        precision_benchmark = 391/417
         
         precision = self.in_both.sum()/self.in_extract.sum()
         self.assertGreaterEqual(
@@ -76,7 +76,7 @@ class SampleTestSTJ(unittest.TestCase):
         """
         Tests algorithm recall against annotations
         """
-        recall_benchmark = 385/405
+        recall_benchmark = 391/405
         
         recall = self.in_both.sum()/self.in_anots.sum()
         
