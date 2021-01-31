@@ -320,8 +320,8 @@ class SingularPatterns(BasePatterns):
         # These patterns were added to catch different structures used for sumulas. Especially in STJ
         patterns.extend(
             [
-                r'(enunciado|verbete)( d.)?(?P<classe>\ssumula( vinculante)?)(\sn.)?(?P<numero>\s[1-9][0-9]{0,3})\b',
-                r'(enunciado|verbete)( n.{0,2})?(?P<numero>\s[1-9][0-9]{0,3})\b(\sd.)?(?P<classe>\ssumula( vinculante)?)'
+                r'(enunciado|verbete)( d.)?\s(?P<classe>sumula( vinculante)?)(\sn.)?\s(?P<numero>[1-9][0-9]{0,3})\b',
+                r'(enunciado|verbete)( n.{0,2})?\s(?P<numero>[1-9][0-9]{0,3})\b(\sd.)?\s(?P<classe>sumula( vinculante)?)'
             ]
         )
         return patterns
@@ -341,7 +341,7 @@ class PluralizedPatterns(BasePatterns):
         # These patterns were added to catch different structures used for sumulas. Especially in STJ
         patterns.extend(
             [
-                r'(enunciados|verbetes)(?P<numero>(( n[^\s]{0,3})?\s?[1-9][0-9]{0,9},?){1,}( e( n[^\s]{0,3})? [1-9][0-9]{0,9}){0,1})(\sd.{0,2})(?P<classe>\ssumula(s?)( vinculante(.?))?)',
+                r'(enunciados|verbetes)(?P<numero>(( n[^\s]{0,3})?\s?[1-9][0-9]{0,9},?){1,}( e( n[^\s]{0,3})? [1-9][0-9]{0,9}){0,1})(\sd.{0,2})\s(?P<classe>sumula(s?)( vinculante(.?))?)',
                 r'(enunciado(s)?|verbete(s)?)(\sd.{0,2})? (?P<classe>sumula(s?)(\svinculante(.?))?)(?P<numero>(( n[^\s]{0,3})?\s?[1-9][0-9]{0,9},?){1,}( e( n[^\s]{0,3})? [1-9][0-9]{0,9}){0,1})'
             ]
         )
