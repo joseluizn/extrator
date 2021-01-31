@@ -42,14 +42,17 @@ class SampleTestSTJ(unittest.TestCase):
 
         for f in dec_files:
             title = f.split('/')[-1]
-            id_ = helpers.parse_title_for_uniqueness(f)
+            id_ = helpers.parse_title_for_uniqueness(title)
             a = core.submit(open(f, 'r'), id_=id_, default_court='STJ')
 
             for key, cits in a.items():
                 for cit in cits:
-                    cit = cit.split(' ') #cit is classe, num, soi, tribunal, posfixo
-                    
-                    self.extract_precs.append('_'.join([title, cit[0], cit[1], cit[3]]))
+                    if cit == "None":
+                        continue
+                    else:
+                        cit = cit.split(' ') #cit is classe, num, soi, tribunal, posfixo
+                        
+                        self.extract_precs.append('_'.join([title, cit[0], cit[1], cit[3]]))
                     
         self.all_precs = list(set(self.anot_precs) | set(self.extract_precs))
         self.in_anots = np.isin(self.all_precs, self.anot_precs)
@@ -60,7 +63,7 @@ class SampleTestSTJ(unittest.TestCase):
         """
         Tests algorithm precision against annotations
         """
-        precision_benchmark = 385/511
+        precision_benchmark = 385/431
         
         precision = self.in_both.sum()/self.in_extract.sum()
         self.assertGreaterEqual(
