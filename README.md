@@ -1,4 +1,4 @@
-# Extrator de precedentes do STJ e STF
+# Precedent Extractor for STJ and STF
 
 This package offers a Python 2.7 tool for the extraction of precedents citation from opinions issued by the Brazilian Superior Court of Justice (Superior Tribunal de Justiça - STJ) and Brazilian Supreme Court (Supremo Tribunal Federal - STF). 
 
@@ -30,6 +30,14 @@ To run the program you must  run the following command from the root:
 
 ```
 python core.py --ids FILE -c COURT --n_cores N_PROCESS
+```
+
+## Testing
+
+To run the full routine of tests included use the following command
+
+```
+python -m unittest discover -s test -p 'tests_*.py'
 ```
 
 ## Output
