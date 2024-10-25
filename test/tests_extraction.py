@@ -153,6 +153,11 @@ class ExtractionTests(unittest.TestCase):
         match_string = match.string[match.start():match.end()]
         self.assertEqual(match_string, normalize('re n.º 98765'))
 
+    def test_should_match_plural_citation_ver_multiple_lines(self):
+        # source: https://jurisprudencia.stf.jus.br/pages/search/sjur190500/false
+        digest = """EMENTA: EMBARGOS DE DECLARAÇÃO NA RECLAMAÇÃO. \nCONVERSÃO EM AGRAVO REGIMENTAL. ALEGAÇÃO DE znDESCUMPRIMENTO DO QUE DECIDIDO NAS AÇÕES DIRETAS DE \nINCONSTITUCIONALIDADE N. 1.717/DF, 3.026/DF E 2.135-MC/DF. \nAGRAVO REGIMENTAL AO QUAL SE NEGA PROVIMENTO."""
+        # not implemented
+
         
 if __name__ == '__main__':
   unittest.main()
